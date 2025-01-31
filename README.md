@@ -5,7 +5,7 @@ TypeScriptの環境構築からコンパイルまでの一連の流れを学習�
 ## 事前準備
 
 - Node.jsのインストール
-  
+- yarnのインストール
 
 ## 本リポジトリの動作確認方法
 
@@ -27,7 +27,7 @@ node dist/increment.js
 #### 1. package.jsonの作成
 
 ```shell
-npm init -f
+yarn init -y
 ```
 
 #### 2. typscriptおよびtsxのインストール
