@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsx src/increment.ts",
+    "dev:types": "tsx src/types-basic.ts",
+    "dev:class": "tsx src/class-example.ts",
+    "dev:async": "tsx src/async-example.ts",
+    "build": "tsc",
+    "start": "node dist/increment.js",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
   },
   "repository": {
     "type": "git",
@@ -15,7 +22,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "tsx": "^4.7.3",
-    "typescript": "^5.4.3"
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2"
   }
 }

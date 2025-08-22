@@ -1,10 +1,30 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "strict": true,
-    "skipLibCheck": true
-  }
+    /* 言語と環境 */
+    "target": "ES2022",                     /* Node.js 20 は ES2022 まで完全サポート */
+    "module": "commonjs",                    /* Node.js のデフォルトモジュールシステム */
+    
+    /* 入出力 */
+    "rootDir": "./src",                     /* TypeScriptソースコードのルートディレクトリ */
+    "outDir": "./dist",                     /* コンパイル後のJavaScriptの出力先 */
+    "sourceMap": true,                      /* デバッグ用のソースマップを生成 */
+    "removeComments": true,                 /* コンパイル時にコメントを削除 */
+    
+    /* 型チェック */
+    "strict": true,                         /* 厳格な型チェックを有効化 */
+    "noImplicitAny": true,                  /* 暗黙的なany型を禁止 */
+    "strictNullChecks": true,               /* null/undefinedの厳格なチェック */
+    "strictFunctionTypes": true,            /* 関数型の厳格なチェック */
+    "noUnusedLocals": true,                 /* 未使用のローカル変数を警告 */
+    "noUnusedParameters": true,             /* 未使用の関数パラメータを警告 */
+    "noImplicitReturns": true,              /* すべての分岐でreturnすることを強制 */
+    
+    /* モジュール解決 */
+    "esModuleInterop": true,                /* CommonJSモジュールとの互換性 */
+    "skipLibCheck": true,                   /* 型定義ファイルのチェックをスキップ */
+    "forceConsistentCasingInFileNames": true, /* ファイル名の大文字小文字を厳密にチェック */
+    "resolveJsonModule": true               /* JSONファイルのimportを許可 */
+  },
+  "include": ["src/**/*"],                  /* コンパイル対象のファイル */
+  "exclude": ["node_modules", "dist"]       /* コンパイル対象外のファイル */
 }
