@@ -1,0 +1,18 @@
+name: 学習の質問 / Question
+description: レッスンや演習について分からないことを質問する / Ask a question about a lesson or exercise
+labels: [question]
+body:
+  - type: input
+    id: lesson
+    attributes:
+      label: 対象のレッスン・演習 / Related lesson or exercise
+      placeholder: "例: src/06-generics.ts / exercises/07-utility-types.ts"
+    validations:
+      required: false
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容 / Your question
+      description: 試したことやエラーメッセージがあれば一緒に書いてください
+    validations:
+      required: true

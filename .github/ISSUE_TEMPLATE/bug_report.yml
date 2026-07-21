@@ -1,0 +1,28 @@
+name: バグ報告 / Bug Report
+description: サンプルコードや手順の誤りを報告する / Report a problem in the code or docs
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題の内容 / What happened
+      description: どのファイル・手順で何が起きたかを書いてください
+      placeholder: "例: yarn tsx src/05-narrowing.ts を実行するとエラーになる"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作 / Expected behavior
+    validations:
+      required: false
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境 / Environment
+      placeholder: |
+        - OS: macOS 15
+        - Node.js: v22.x
+        - yarn: 1.22.x
+    validations:
+      required: false
