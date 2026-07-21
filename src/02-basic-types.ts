@@ -35,6 +35,8 @@ export function identity<T>(value: T): T {
 // このファイルを直接実行したときだけデモを動かす
 // 実行方法: yarn tsx src/02-basic-types.ts
 if (typeof require !== "undefined" && require.main === module) {
+  console.log("=== TypeScript 基本的な型の例 ===")
+
   // プリミティブ型
   const userName: string = "太郎"
   const age: number = 25
@@ -67,7 +69,6 @@ if (typeof require !== "undefined" && require.main === module) {
   const num = identity<number>(42)
 
   // 実行結果の確認
-  console.log("=== TypeScript 基本的な型の例 ===")
   console.log("名前:", userName)
   console.log("年齢:", age)
   console.log("学生:", isStudent)

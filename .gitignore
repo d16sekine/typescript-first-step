@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Claude Code のローカル設定（個人の許可リストなので共有しない）
+.claude/settings.local.json

@@ -81,9 +81,12 @@ yarn tsx exercises/solutions/02-basic-types.ts
 | `yarn test` | Run tests (Vitest) |
 | `yarn test:watch` | Run tests in watch mode |
 | `yarn type-check` | Type-check without emitting files |
+| `yarn check:tests` | Type-check the tests |
+| `yarn check:exercises` | Type-check the exercises |
 | `yarn check:all` | Type-check src, tests and exercises |
 | `yarn lint` | Static analysis with ESLint |
 | `yarn format` | Format code with Prettier |
+| `yarn format:check` | Check formatting without writing files |
 | `yarn build` | Compile TypeScript to JavaScript |
 | `yarn start` | Run the compiled JavaScript |
 | `yarn clean` | Remove the dist directory |
@@ -125,6 +128,7 @@ Then replace it with the following (customize as needed):
     "rootDir": "./src",                     /* Root directory of TypeScript sources */
     "outDir": "./dist",                     /* Output directory for compiled JavaScript */
     "sourceMap": true,                      /* Generate source maps for debugging */
+    "removeComments": true,                 /* Strip comments from the compiled output */
 
     /* Type checking */
     "strict": true,                         /* Enable strict type checking */
@@ -186,7 +190,7 @@ typescript-first-step/
 1. **01–04**: Cover the TypeScript basics (annotations, functions, classes)
 2. **05–07**: Learn the type features you will use daily at work (narrowing, generics, utility types)
 3. **08–09**: Reach async code and modern type-safety features
-4. After each lesson, solidify it with the matching exercise
+4. Solidify what you learned with the exercises (available for lessons 02, 03, 05, 07 and 08)
 
 ### Next steps
 

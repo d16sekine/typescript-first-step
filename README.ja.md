@@ -79,9 +79,12 @@ yarn tsx exercises/solutions/02-basic-types.ts
 | `yarn test` | テストを実行（Vitest） |
 | `yarn test:watch` | テストをwatchモードで実行 |
 | `yarn type-check` | 型チェックのみ実行（ファイル出力なし） |
+| `yarn check:tests` | tests の型チェック |
+| `yarn check:exercises` | exercises の型チェック |
 | `yarn check:all` | src・tests・exercises すべての型チェック |
 | `yarn lint` | ESLintによる静的解析 |
 | `yarn format` | Prettierによるコード整形 |
+| `yarn format:check` | 整形チェックのみ（ファイルを書き換えない） |
 | `yarn build` | TypeScriptをJavaScriptにコンパイル |
 | `yarn start` | コンパイル済みのJavaScriptを実行 |
 | `yarn clean` | distディレクトリを削除 |
@@ -123,6 +126,7 @@ yarn tsc --init
     "rootDir": "./src",                     /* TypeScriptソースコードのルートディレクトリ */
     "outDir": "./dist",                     /* コンパイル後のJavaScriptの出力先 */
     "sourceMap": true,                      /* デバッグ用のソースマップを生成 */
+    "removeComments": true,                 /* コンパイル後のJSからコメントを削除 */
 
     /* 型チェック */
     "strict": true,                         /* 厳格な型チェックを有効化 */
@@ -185,7 +189,7 @@ typescript-first-step/
 1. **01〜04**: TypeScriptの基本（型注釈・関数・クラス）をおさえる
 2. **05〜07**: 実務で頻出の型機能（絞り込み・ジェネリクス・ユーティリティ型）を身につける
 3. **08〜09**: 非同期処理とモダンな型安全機能まで到達する
-4. 各レッスン後に対応する演習問題を解いて定着させる
+4. 演習問題（レッスン02・03・05・07・08に対応）を解いて定着させる
 
 ### 次のステップ
 

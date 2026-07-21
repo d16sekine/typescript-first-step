@@ -22,6 +22,7 @@ yarn check:all      # src / tests / exercises の型チェック
 yarn lint           # ESLint
 yarn format:check   # Prettier（yarn format で自動整形）
 yarn test           # Vitest
+yarn build          # コンパイルが通ることを確認
 ```
 
 ## レッスン・演習を追加するときの規約
