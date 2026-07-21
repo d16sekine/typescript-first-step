@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node dist/01-first-step.js",
     "type-check": "tsc --noEmit",
+    "check:exercises": "tsc -p exercises",
     "clean": "rm -rf dist"
   },
   "repository": {
