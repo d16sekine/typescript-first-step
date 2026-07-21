@@ -1,0 +1,18 @@
+# Dependabot: 依存パッケージとGitHub Actionsの週次自動更新
+version: 2
+updates:
+  # npm（devDependencies）はまとめて1本のPRにする
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      dev-dependencies:
+        patterns:
+          - "*"
+
+  # CIで使うGitHub Actionsの更新
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
