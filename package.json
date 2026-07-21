@@ -7,8 +7,12 @@
     "dev": "tsx src/01-first-step.ts",
     "build": "tsc",
     "start": "node dist/01-first-step.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "type-check": "tsc --noEmit",
+    "check:tests": "tsc -p tests",
     "check:exercises": "tsc -p exercises",
+    "check:all": "yarn type-check && yarn check:tests && yarn check:exercises",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -22,6 +26,7 @@
   "devDependencies": {
     "@types/node": "^26.1.1",
     "tsx": "^4.20.4",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^4.1.10"
   }
 }
