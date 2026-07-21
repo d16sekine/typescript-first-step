@@ -1,8 +1,43 @@
 {
+  "includeCoAuthoredBy": false,
   "permissions": {
-    "allow": ["Bash(yarn type-check)", "Bash(yarn build)", "Bash(yarn start)"],
+    "allow": [
+      "Bash(yarn type-check)",
+      "Bash(yarn build)",
+      "Bash(yarn start)",
+      "Bash(git -C /home/user/typescript-first-step log --oneline -5)",
+      "Bash(git -C /home/user/typescript-first-step status)",
+      "Bash(yarn --version)",
+      "Bash(mkdir -p /root/.claude/plans && echo ok)",
+      "Bash(git mv *)",
+      "Bash(yarn add *)",
+      "Bash(yarn type-check *)",
+      "Bash(yarn -s tsx src/01-first-step.ts)",
+      "Bash(yarn -s tsx src/03-functions.ts)",
+      "Bash(yarn -s tsx src/05-narrowing.ts)",
+      "Bash(yarn -s tsx src/06-generics.ts)",
+      "Bash(yarn -s tsx src/07-utility-types.ts)",
+      "Bash(yarn -s tsx src/02-basic-types.ts)",
+      "Bash(yarn -s tsx src/04-classes.ts)",
+      "Bash(yarn -s tsx src/08-async.ts)",
+      "Bash(yarn clean *)",
+      "Bash(yarn build *)",
+      "Bash(yarn start *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'feat: reorganize src into a numbered 9-lesson curriculum *)",
+      "Bash(yarn check:exercises)",
+      "Bash(yarn -s tsx exercises/solutions/02-basic-types.ts)",
+      "Bash(yarn -s tsx exercises/solutions/03-functions.ts)",
+      "Bash(yarn -s tsx exercises/solutions/05-narrowing.ts)",
+      "Bash(git commit -q -m 'feat: add exercises with self-checks and solutions *)",
+      "Bash(yarn test *)",
+      "Bash(yarn check:all)",
+      "Bash(git commit -q -m 'feat: add Vitest with educational tests for every lesson *)",
+      "Bash(yarn lint *)",
+      "Bash(echo \"LINT_EXIT=$?\")",
+      "Bash(yarn format *)"
+    ],
     "deny": [],
     "ask": []
-  },
-  "includeCoAuthoredBy": false
+  }
 }

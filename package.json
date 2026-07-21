@@ -13,6 +13,9 @@
     "check:tests": "tsc -p tests",
     "check:exercises": "tsc -p exercises",
     "check:all": "yarn type-check && yarn check:tests && yarn check:exercises",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -24,9 +27,14 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/node": "^26.1.1",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
+    "typescript-eslint": "^8.65.0",
     "vitest": "^4.1.10"
   }
 }

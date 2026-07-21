@@ -59,7 +59,10 @@ if (typeof require !== "undefined" && require.main === module) {
   // 関数型エイリアスとコールバック
   console.log("10 + 3 =", applyOperation(10, 3, addCalc))
   console.log("10 - 3 =", applyOperation(10, 3, subtractCalc))
-  console.log("10 × 3 =", applyOperation(10, 3, (a, b) => a * b))
+  console.log(
+    "10 × 3 =",
+    applyOperation(10, 3, (a, b) => a * b)
+  )
 
   // void型
   logMessage("処理が完了しました")

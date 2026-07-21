@@ -52,6 +52,7 @@ if (typeof require !== "undefined" && require.main === module) {
   // Union型（複数の型を許可）
   let id: string | number
   id = "ABC123"
+  console.log("文字列のid:", id)
   id = 123
 
   const currentStatus: Status = "success"

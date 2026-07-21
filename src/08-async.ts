@@ -68,11 +68,7 @@ async function parallel() {
   console.log("\n=== 並列で実行 ===")
 
   // Promise.allで同時に実行
-  const results = await Promise.all([
-    getUser(1),
-    getUser(2),
-    getUser(3)
-  ])
+  const results = await Promise.all([getUser(1), getUser(2), getUser(3)])
 
   console.log("取得したユーザー:")
   results.forEach(user => {

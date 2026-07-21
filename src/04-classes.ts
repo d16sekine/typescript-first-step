@@ -21,7 +21,10 @@ export abstract class Pet implements Animal {
 
 // クラスの継承
 export class Dog extends Pet {
-  constructor(name: string, public breed: string) {
+  constructor(
+    name: string,
+    public breed: string
+  ) {
     super(name)
   }
 
@@ -36,7 +39,10 @@ export class Dog extends Pet {
 }
 
 export class Cat extends Pet {
-  constructor(name: string, private age: number) {
+  constructor(
+    name: string,
+    private age: number
+  ) {
     super(name)
   }
 
