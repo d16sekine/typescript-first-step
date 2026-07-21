@@ -35,7 +35,9 @@
       "Bash(git commit -q -m 'feat: add Vitest with educational tests for every lesson *)",
       "Bash(yarn lint *)",
       "Bash(echo \"LINT_EXIT=$?\")",
-      "Bash(yarn format *)"
+      "Bash(yarn format *)",
+      "Bash(yarn format:check)",
+      "Bash(git commit -q -m 'docs: bilingual READMEs, package metadata, CLAUDE.md refresh *)"
     ],
     "deny": [],
     "ask": []

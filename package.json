@@ -1,8 +1,8 @@
 {
   "name": "typescript-first-step",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A step-by-step TypeScript learning repository: from environment setup to modern type features, with Japanese explanations (TypeScript入門: 環境構築からモダンな型機能まで)",
+  "private": true,
   "scripts": {
     "dev": "tsx src/01-first-step.ts",
     "build": "tsc",
@@ -22,9 +22,24 @@
     "type": "git",
     "url": "git+https://github.com/d16sekine/typescript-first-step.git"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "tutorial",
+    "learning",
+    "beginner",
+    "examples",
+    "exercises",
+    "japanese",
+    "tsx",
+    "vitest",
+    "入門",
+    "日本語"
+  ],
   "author": "d16sekine",
   "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^10.0.1",
