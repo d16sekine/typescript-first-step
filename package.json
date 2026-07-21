@@ -4,12 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx src/increment.ts",
-    "dev:types": "tsx src/types-basic.ts",
-    "dev:class": "tsx src/class-example.ts",
-    "dev:async": "tsx src/async-example.ts",
+    "dev": "tsx src/01-first-step.ts",
     "build": "tsc",
-    "start": "node dist/increment.js",
+    "start": "node dist/01-first-step.js",
     "type-check": "tsc --noEmit",
     "clean": "rm -rf dist"
   },
@@ -22,6 +19,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "@types/node": "^26.1.1",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2"
   }

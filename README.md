@@ -31,10 +31,8 @@ yarn start
 
 | コマンド | 説明 |
 |---------|------|
-| `yarn dev` | increment.ts を実行（基本例） |
-| `yarn dev:types` | types-basic.ts を実行（型の基本） |
-| `yarn dev:class` | class-example.ts を実行（クラスとインターフェース） |
-| `yarn dev:async` | async-example.ts を実行（非同期処理） |
+| `yarn dev` | 01-first-step.ts を実行（基本例） |
+| `yarn tsx src/<ファイル名>` | 任意のレッスンファイルを直接実行 |
 | `yarn build` | TypeScriptをJavaScriptにコンパイル |
 | `yarn start` | コンパイル済みのJavaScriptを実行 |
 | `yarn type-check` | 型チェックのみ実行（ファイル出力なし） |
@@ -44,10 +42,15 @@ yarn start
 
 本リポジトリには以下の学習用サンプルが含まれています：
 
-1. **increment.ts** - 関数と基本的な型定義の例
-2. **types-basic.ts** - TypeScriptの基本的な型（プリミティブ、配列、オブジェクト、Union型、ジェネリクス等）
-3. **class-example.ts** - クラス、継承、インターフェース、抽象クラスの使い方
-4. **async-example.ts** - 非同期処理、Promise、async/await、エラーハンドリング
+1. **01-first-step.ts** - 関数と基本的な型定義の例
+2. **02-basic-types.ts** - TypeScriptの基本的な型（プリミティブ、配列、オブジェクト、Union型、ジェネリクス等）
+3. **03-functions.ts** - 関数の型（オプショナル引数、デフォルト引数、コールバック等）
+4. **04-classes.ts** - クラス、継承、インターフェース、抽象クラスの使い方
+5. **05-narrowing.ts** - 型の絞り込み（typeof、判別可能なUnion、型ガード等）
+6. **06-generics.ts** - ジェネリクス応用（制約、keyof、複数型引数等）
+7. **07-utility-types.ts** - ユーティリティ型（Partial、Pick、Omit、Record等）
+8. **08-async.ts** - 非同期処理、Promise、async/await、エラーハンドリング
+9. **09-type-safety.ts** - モダンな型安全機能（unknown、as const、satisfies等）
 
 
 ## 各ステップ解説
@@ -116,7 +119,7 @@ yarn tsc --init
 #### 1. tsファイルを書く
 
 
-[サンプルコード](./src/increment.ts)
+[サンプルコード](./src/01-first-step.ts)
 
 ```ts
 const increment = (num: number) => {
