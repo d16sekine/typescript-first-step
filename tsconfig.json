@@ -21,6 +21,7 @@
 
     /* モジュール解決 */
     "esModuleInterop": true /* CommonJSモジュールとの互換性 */,
+    "types": ["node"] /* Node.js のグローバル型（require/module など）を読み込む */,
     "skipLibCheck": true /* 型定義ファイルのチェックをスキップ */,
     "forceConsistentCasingInFileNames": true /* ファイル名の大文字小文字を厳密にチェック */,
     "resolveJsonModule": true /* JSONファイルのimportを許可 */
