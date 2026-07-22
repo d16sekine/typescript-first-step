@@ -9,4 +9,4 @@
 - [ ] `yarn format:check` が通る
 - [ ] `yarn test` が通る
 - [ ] `yarn build` が通る
-- [ ] （レッスン・演習を変更した場合）README.md と README.ja.md を両方更新した
+- [ ] （レッスン・演習を変更した場合）README.md と README.en.md を両方更新した

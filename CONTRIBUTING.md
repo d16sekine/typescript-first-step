@@ -38,7 +38,7 @@ if (typeof require !== "undefined" && require.main === module) {
 ```
 
 - 演習は `exercises/NN-topic.ts` に問題（`throw new Error("TODO: ...")` のスタブ+答え合わせ）、`exercises/solutions/` に解答例を置いてください。未実装のままでも `yarn check:exercises` が通る必要があります
-- レッスンを追加したら `tests/NN-topic.test.ts` にテストを追加し、README.md / README.ja.md のカリキュラム表を両方更新してください
+- レッスンを追加したら `tests/NN-topic.test.ts` にテストを追加し、README.md / README.en.md のカリキュラム表を両方更新してください
 - 学習用リポジトリなので、シンプルさと教育的な分かりやすさを最優先してください
 
 ## コミットメッセージ

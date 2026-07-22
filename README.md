@@ -1,207 +1,206 @@
 # typescript-first-step
 
-English | [日本語](./README.ja.md)
+[English](./README.en.md) | 日本語
 
 [![CI](https://github.com/d16sekine/typescript-first-step/actions/workflows/ci.yml/badge.svg)](https://github.com/d16sekine/typescript-first-step/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6.svg)](https://www.typescriptlang.org/)
 
-A hands-on TypeScript learning repository that takes you step by step from environment setup to modern type-level features.
-It consists of 9 numbered lessons and self-checking exercises with solutions.
+TypeScriptの環境構築からモダンな型機能まで、手を動かしながら一歩ずつ学べる入門リポジトリです。
+番号付きの9つのレッスンと、自分で解ける演習問題（解答付き）で構成されています。
 
-> Code comments and console output are written in Japanese, but the code itself is universal — the lesson and exercise structure works in any language.
+## 目次
 
-## Table of Contents
+- [クイックスタート](#クイックスタート)
+- [カリキュラム](#カリキュラム)
+- [演習問題](#演習問題)
+- [利用可能なスクリプト](#利用可能なスクリプト)
+- [環境構築を自分でやってみる](#環境構築を自分でやってみる)
+- [プロジェクト構成](#プロジェクト構成)
+- [学習ロードマップ](#学習ロードマップ)
+- [コントリビュート](#コントリビュート)
+- [ライセンス](#ライセンス)
 
-- [Quick Start](#quick-start)
-- [Curriculum](#curriculum)
-- [Exercises](#exercises)
-- [Available Scripts](#available-scripts)
-- [Set Up the Environment Yourself](#set-up-the-environment-yourself)
-- [Project Structure](#project-structure)
-- [Learning Roadmap](#learning-roadmap)
-- [Contributing](#contributing)
-- [License](#license)
+## クイックスタート
 
-## Quick Start
-
-Prerequisites: [Node.js](https://nodejs.org/) (v20+) and [yarn](https://classic.yarnpkg.com/)
+事前準備: [Node.js](https://nodejs.org/)（v20以上）と [yarn](https://classic.yarnpkg.com/) のインストール
 
 ```sh
-# Install dependencies
+# 依存関係のインストール
 yarn install
 
-# Run the first lesson
+# 最初のレッスンを実行
 yarn dev
 # => 100
 
-# Run the tests
+# テストを実行
 yarn test
 ```
 
-## Curriculum
+## カリキュラム
 
-Each lesson is a standalone file you can run directly with `yarn tsx src/<file>`.
+各レッスンは独立したファイルになっており、`yarn tsx src/<ファイル名>` で実行しながら学べます。
 
-| # | Lesson | Topics | Run |
-|---|--------|--------|-----|
-| 01 | [First Step](./src/01-first-step.ts) | Functions and type annotations | `yarn dev` |
-| 02 | [Basic Types](./src/02-basic-types.ts) | Primitives, arrays, unions, type aliases | `yarn tsx src/02-basic-types.ts` |
-| 03 | [Function Types](./src/03-functions.ts) | Optional/default params, callbacks | `yarn tsx src/03-functions.ts` |
-| 04 | [Classes & Interfaces](./src/04-classes.ts) | Inheritance, abstract classes, getters/setters | `yarn tsx src/04-classes.ts` |
-| 05 | [Narrowing](./src/05-narrowing.ts) | typeof, discriminated unions, type guards | `yarn tsx src/05-narrowing.ts` |
-| 06 | [Advanced Generics](./src/06-generics.ts) | Constraints, keyof, multiple type params | `yarn tsx src/06-generics.ts` |
-| 07 | [Utility Types](./src/07-utility-types.ts) | Partial, Pick, Omit, Record | `yarn tsx src/07-utility-types.ts` |
-| 08 | [Async](./src/08-async.ts) | async/await, Promise.all, error handling | `yarn tsx src/08-async.ts` |
-| 09 | [Modern Type Safety](./src/09-type-safety.ts) | unknown, as const, satisfies | `yarn tsx src/09-type-safety.ts` |
+| # | レッスン | 内容 | 実行コマンド |
+|---|---------|------|------------|
+| 01 | [はじめの一歩](./src/01-first-step.ts) | 関数と型注釈 | `yarn dev` |
+| 02 | [基本的な型](./src/02-basic-types.ts) | プリミティブ・配列・Union型・型エイリアス | `yarn tsx src/02-basic-types.ts` |
+| 03 | [関数の型](./src/03-functions.ts) | オプショナル引数・デフォルト引数・コールバック | `yarn tsx src/03-functions.ts` |
+| 04 | [クラスとインターフェース](./src/04-classes.ts) | 継承・抽象クラス・ゲッター/セッター | `yarn tsx src/04-classes.ts` |
+| 05 | [型の絞り込み](./src/05-narrowing.ts) | typeof・判別可能なUnion・型ガード | `yarn tsx src/05-narrowing.ts` |
+| 06 | [ジェネリクス応用](./src/06-generics.ts) | 制約・keyof・複数型引数 | `yarn tsx src/06-generics.ts` |
+| 07 | [ユーティリティ型](./src/07-utility-types.ts) | Partial・Pick・Omit・Record | `yarn tsx src/07-utility-types.ts` |
+| 08 | [非同期処理](./src/08-async.ts) | async/await・Promise.all・エラー処理 | `yarn tsx src/08-async.ts` |
+| 09 | [モダンな型安全機能](./src/09-type-safety.ts) | unknown・as const・satisfies | `yarn tsx src/09-type-safety.ts` |
 
-## Exercises
+## 演習問題
 
-The `exercises/` directory contains problems matching the lessons.
+`exercises/` ディレクトリには、レッスンに対応した演習問題があります。
 
-1. Open an exercise file and replace each `throw new Error("TODO...")` with your implementation
-2. Run the file to check your answers (each problem prints ✅ or ❌)
+1. 演習ファイルを開き、`throw new Error("TODO...")` の部分を実装する
+2. 実行して答え合わせをする（✅/❌ が表示されます）
 
 ```sh
 yarn tsx exercises/02-basic-types.ts
 ```
 
-3. Once everything is ✅, compare with the reference solution in `exercises/solutions/`
+3. すべて ✅ になったら、`exercises/solutions/` の解答例と見比べる
 
 ```sh
 yarn tsx exercises/solutions/02-basic-types.ts
 ```
 
-## Available Scripts
+## 利用可能なスクリプト
 
-| Command | Description |
-|---------|-------------|
-| `yarn dev` | Run the first lesson (01-first-step.ts) |
-| `yarn tsx <file>` | Run any TypeScript file directly |
-| `yarn test` | Run tests (Vitest) |
-| `yarn test:watch` | Run tests in watch mode |
-| `yarn type-check` | Type-check without emitting files |
-| `yarn check:tests` | Type-check the tests |
-| `yarn check:exercises` | Type-check the exercises |
-| `yarn check:all` | Type-check src, tests and exercises |
-| `yarn lint` | Static analysis with ESLint |
-| `yarn format` | Format code with Prettier |
-| `yarn format:check` | Check formatting without writing files |
-| `yarn build` | Compile TypeScript to JavaScript |
-| `yarn start` | Run the compiled JavaScript |
-| `yarn clean` | Remove the dist directory |
+| コマンド | 説明 |
+|---------|------|
+| `yarn dev` | 最初のレッスン（01-first-step.ts）を実行 |
+| `yarn tsx <ファイル>` | 任意のTypeScriptファイルを直接実行 |
+| `yarn test` | テストを実行（Vitest） |
+| `yarn test:watch` | テストをwatchモードで実行 |
+| `yarn type-check` | 型チェックのみ実行（ファイル出力なし） |
+| `yarn check:tests` | tests の型チェック |
+| `yarn check:exercises` | exercises の型チェック |
+| `yarn check:all` | src・tests・exercises すべての型チェック |
+| `yarn lint` | ESLintによる静的解析 |
+| `yarn format` | Prettierによるコード整形 |
+| `yarn format:check` | 整形チェックのみ（ファイルを書き換えない） |
+| `yarn build` | TypeScriptをJavaScriptにコンパイル |
+| `yarn start` | コンパイル済みのJavaScriptを実行 |
+| `yarn clean` | distディレクトリを削除 |
 
-## Set Up the Environment Yourself
+## 環境構築を自分でやってみる
 
-These are the steps to recreate this environment from scratch.
+このリポジトリと同じ環境をゼロから作る手順です。
 
-### 1. Create package.json
+### 1. package.jsonの作成
 
 ```sh
 yarn init -y
 ```
 
-### 2. Install typescript and tsx
+### 2. typescriptおよびtsxのインストール
 
 ```sh
 yarn add -D typescript tsx
 ```
 
-### 3. Create tsconfig.json
+### 3. tsconfig.jsonの作成
 
-Generate a `tsconfig.json` with the compiler:
+tscコマンドで `tsconfig.json` を作成します。
 
 ```sh
 yarn tsc --init
 ```
 
-Then replace it with the following (customize as needed):
+`tsconfig.json` を下記に変更します。必要に応じてカスタマイズしてください。
 
 ```json
 {
   "compilerOptions": {
-    /* Language and environment */
-    "target": "ES2022",                     /* Fully supported by Node.js 20 */
-    "module": "commonjs",                   /* Node.js default module system */
+    /* 言語と環境 */
+    "target": "ES2022",                     /* Node.js 20 は ES2022 まで完全サポート */
+    "module": "commonjs",                   /* Node.js のデフォルトモジュールシステム */
 
-    /* Input / output */
-    "rootDir": "./src",                     /* Root directory of TypeScript sources */
-    "outDir": "./dist",                     /* Output directory for compiled JavaScript */
-    "sourceMap": true,                      /* Generate source maps for debugging */
-    "removeComments": true,                 /* Strip comments from the compiled output */
+    /* 入出力 */
+    "rootDir": "./src",                     /* TypeScriptソースコードのルートディレクトリ */
+    "outDir": "./dist",                     /* コンパイル後のJavaScriptの出力先 */
+    "sourceMap": true,                      /* デバッグ用のソースマップを生成 */
+    "removeComments": true,                 /* コンパイル後のJSからコメントを削除 */
 
-    /* Type checking */
-    "strict": true,                         /* Enable strict type checking */
-    "noUnusedLocals": true,                 /* Report unused local variables */
-    "noUnusedParameters": true,             /* Report unused function parameters */
-    "noImplicitReturns": true,              /* Require a return in every code path */
+    /* 型チェック */
+    "strict": true,                         /* 厳格な型チェックを有効化 */
+    "noUnusedLocals": true,                 /* 未使用のローカル変数を警告 */
+    "noUnusedParameters": true,             /* 未使用の関数パラメータを警告 */
+    "noImplicitReturns": true,              /* すべての分岐でreturnすることを強制 */
 
-    /* Module resolution */
-    "esModuleInterop": true,                /* Interop with CommonJS modules */
-    "skipLibCheck": true,                   /* Skip type checking of declaration files */
-    "forceConsistentCasingInFileNames": true, /* Enforce consistent file name casing */
-    "resolveJsonModule": true               /* Allow importing JSON files */
+    /* モジュール解決 */
+    "esModuleInterop": true,                /* CommonJSモジュールとの互換性 */
+    "skipLibCheck": true,                   /* 型定義ファイルのチェックをスキップ */
+    "forceConsistentCasingInFileNames": true, /* ファイル名の大文字小文字を厳密にチェック */
+    "resolveJsonModule": true               /* JSONファイルのimportを許可 */
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/**/*"],                  /* コンパイル対象のファイル */
+  "exclude": ["node_modules", "dist"]       /* コンパイル対象外のファイル */
 }
 ```
 
-References:
+参考リンク:
 
-- Target per Node.js version: [Recommended Node TSConfig settings](https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping)
-- Official docs: [tsconfig reference](https://www.typescriptlang.org/tsconfig/)
+- 各設定項目の解説: [【TypeScript】tsconfig.jsonの設定](https://qiita.com/crml1206/items/8fbfbecc0b40968bfc42)
+- targetの設定（Node.jsのバージョンによって変更）: [Recommended Node TSConfig settings](https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping)
+- moduleの設定: [サバイバルTypeScript - tsconfig.jsonの設定](https://typescriptbook.jp/reference/tsconfig/tsconfig.json-settings)
 
-### 4. Development workflow
+### 4. 開発の流れ
 
 ```sh
-# Run a TS file directly without compiling (tsx)
+# tsファイルを書いたら、コンパイルせずにそのまま実行して動作確認（tsx）
 yarn tsx src/01-first-step.ts
 # => 100
 
-# Type check
+# 型チェック
 yarn type-check
 
-# Compile to JavaScript (emitted to the outDir in tsconfig.json)
+# JavaScriptにコンパイル（tsconfig.jsonのoutDirに出力される）
 yarn build
 
-# Run the compiled code
+# コンパイルされたコードを実行
 node dist/01-first-step.js
 # => 100
 ```
 
-## Project Structure
+## プロジェクト構成
 
 ```
 typescript-first-step/
-├── src/                  # Lessons (numbered 01–09)
-├── exercises/            # Exercises (implement the TODOs, then self-check)
-│   └── solutions/        # Reference solutions
-├── tests/                # Tests for each lesson (Vitest)
-├── dist/                 # Compiled JavaScript (generated by yarn build)
-├── tsconfig.json         # TypeScript configuration
-├── vitest.config.ts      # Test configuration
-├── eslint.config.mjs     # ESLint configuration
-└── .prettierrc.json      # Prettier configuration
+├── src/                  # レッスン（01〜09の番号順）
+├── exercises/            # 演習問題（TODOを実装して答え合わせ）
+│   └── solutions/        # 解答例
+├── tests/                # 各レッスンのテスト（Vitest）
+├── dist/                 # コンパイル後のJavaScript（yarn build で生成）
+├── tsconfig.json         # TypeScript設定
+├── vitest.config.ts      # テスト設定
+├── eslint.config.mjs     # ESLint設定
+└── .prettierrc.json      # Prettier設定
 ```
 
-## Learning Roadmap
+## 学習ロードマップ
 
-1. **01–04**: Cover the TypeScript basics (annotations, functions, classes)
-2. **05–07**: Learn the type features you will use daily at work (narrowing, generics, utility types)
-3. **08–09**: Reach async code and modern type-safety features
-4. Solidify what you learned with the exercises (available for lessons 02, 03, 05, 07 and 08)
+1. **01〜04**: TypeScriptの基本（型注釈・関数・クラス）をおさえる
+2. **05〜07**: 実務で頻出の型機能（絞り込み・ジェネリクス・ユーティリティ型）を身につける
+3. **08〜09**: 非同期処理とモダンな型安全機能まで到達する
+4. 演習問題（レッスン02・03・05・07・08に対応）を解いて定着させる
 
-### Next steps
+### 次のステップ
 
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) - The official guide
-- [TypeScript Playground](https://www.typescriptlang.org/play) - Experiment with types in the browser
-- [サバイバルTypeScript](https://typescriptbook.jp/) - Comprehensive practical guide (Japanese)
+- [サバイバルTypeScript](https://typescriptbook.jp/) - 実務で使える日本語の網羅的ガイド
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html) - 公式ドキュメント
+- [TypeScript Playground](https://www.typescriptlang.org/play) - ブラウザ上で型の挙動を試せる
 
-## Contributing
+## コントリビュート
 
-Issues and pull requests are welcome! See [CONTRIBUTING.md](./CONTRIBUTING.md).
+Issue・Pull Requestを歓迎します。詳しくは [CONTRIBUTING.md](./CONTRIBUTING.md) をご覧ください。
 
-## License
+## ライセンス
 
 [MIT](./LICENSE)
