@@ -55,4 +55,4 @@ yarn build
   so tests can import lessons without triggering demos (works under tsx and Vitest)
 - Exercise stubs use `throw new Error("TODO: ...")` bodies and must pass `yarn check:exercises` unsolved
 - Async functions take an optional `delayMs` parameter so tests can pass 0
-- README.md is English, README.ja.md is Japanese — keep both in sync when documenting changes
+- README.md is Japanese (primary), README.en.md is English — keep both in sync when documenting changes
